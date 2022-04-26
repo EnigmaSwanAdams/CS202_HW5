@@ -9,23 +9,31 @@
 */
 
 
+#include "myreadwrite.h"
+
+
+using std::string;
+using std::getline;
+
 
 int main() {
+	
 
-/*
 	ofstream ofile("numbers.dat");
 	double d = 13.3;
 	myWrite(ofile, d);
 	int x = 5;
 	myWrite(ofile, x);
-	…
-		ifstream ifile("numbers.dat");
-	double readd;
-	int readx;
+
+	ifstream ifile("numbers.dat");
+	double readd = 0; // dummy values
+	int readx = 0; // since my compiler doesn't like unitialized variables 
 
 	myRead(ifile, readd);
 	myRead(ifile, readx);
-	*/
+
+	
+	
 
 	return 0; 
 }
