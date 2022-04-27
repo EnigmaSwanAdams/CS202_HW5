@@ -18,8 +18,19 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source.cpp">
+    <ClCompile Include="fibs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fibs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
