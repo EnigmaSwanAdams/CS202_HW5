@@ -4,8 +4,8 @@
 * 4/27/2022
 *
 * file containing main for the
-* Main Program 3: contains tests/proof of functionality 
-* for all three functions in main program 3 (MP3)
+* Main Program 3: includes both function defintions
+* and the main where I test the functions
 */
 
 
@@ -20,9 +20,9 @@ int fib(int);
 int fib_loop(int);
 
 int main() {
-	const int MAX_NUM_FIBS = 1000;
+	const int NUM_FIBS = 1000;
 
-	for(int i=0; i<MAX_NUM_FIBS; i++){
+	for(int i=0; i<NUM_FIBS; i++){
 		cout << fib(i) << " should equal " << fib_loop(i) << endl;
 		if (fib(i) != fib_loop(i)) { cout << "ERROR THEY ARE NOT EQUAL\N"; }
 		if ((fib(i) < 0) || (fib_loop(i) < 0)) { 
@@ -30,7 +30,7 @@ int main() {
 			break;
 		}
 	}
-	cout << "finished" << endl;
+
 	return 0;
 }
 
