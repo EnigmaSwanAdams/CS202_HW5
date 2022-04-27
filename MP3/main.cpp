@@ -19,17 +19,22 @@ using std::endl;
 using std::vector;
 
 int main() {
-	const int MAX_NUM_FIBS = 1000;
-
+	// demonstration of fib and fib_loop 
+	const int MAX_NUM_FIBS = 30;
+	cout << "Printing fibbonacci test. Note the format is index: fib result, fib_loop result\n";
+	cout << "An error should be printed out if an overflow occurs, or the function outputs aren't equal\n";
 	for(int i=0; i<MAX_NUM_FIBS; i++){
-		//cout << fib(i) << " should equal " << fib_loop(i) << endl;
+		cout << i << ": ";
+		cout << fib(i) << ", " << fib_loop(i) << endl;
 		if (fib(i) != fib_loop(i)) { cout << "ERROR THEY ARE NOT EQUAL\N"; }
 		if ((fib(i) < 0) || (fib_loop(i) < 0)) { 
 			cout << "OVERFLOW OCCURED STOPPING CALCULATION\N"; 
-			break;
 		}
 	}
-	cout << "finished" << endl;
+	cout << "finished printing fibbonacci results\n" << endl;
+
+	// demonstration of ack function 
+	cout << ack(2,1);
 	return 0;
 }
 
