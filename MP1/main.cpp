@@ -26,8 +26,8 @@ int main() {
 	myWrite(ofile, x);
 
 	ifstream ifile("numbers.dat");
-	double readd = 0; // dummy values
-	int readx = 0; // since my compiler doesn't like unitialized variables 
+	double readd;
+	int readx; 
 
 	myRead(ifile, readd);
 	myRead(ifile, readx);
