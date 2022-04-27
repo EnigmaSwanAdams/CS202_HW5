@@ -31,7 +31,7 @@ private:
 public:
 	// Rational() { _numerator=0; _denominator=1; }
 	Rational<T>(T=0, T = 1);       // do we not need the <T> ???? for it to match the defintions below?
-    //Rational<T>(); // added defualt constructor 
+   
 
     template<typename T>
 	friend std::ostream& operator<<(std::ostream&, const Rational<T>&);
@@ -91,8 +91,6 @@ Rational<T>::Rational<T>(T num, T den) : _numerator(num), _denominator(den) {
     reduce();
 }
 
-//template<typename T>
-//Rational<T>::Rational<T>() : _numerator(0), _denominator(1) {} // defulat constructor 
 
 template<typename T>
 void Rational<T>::reduce() {
@@ -133,12 +131,14 @@ Rational<T> operator+(const Rational<T>& lhs, const Rational<T>& rhs) {
 
 template<typename T>
 Rational<T> operator-(const Rational<T>& lhs) {
+    
     return { -lhs._numerator, lhs._denominator };
 }
 
 template<typename T>
 Rational<T>& Rational<T>::operator-=(const Rational<T>& rhs) { //Canonical
     *this = *this - rhs; //uses Rational::operator- to define operator-=
+    reduce();
     return *this;
 }
 
@@ -146,6 +146,7 @@ template<typename T>
 Rational<T>& Rational<T>::operator*=(const Rational<T>& rhs) {
     _numerator *= rhs._numerator;
     _denominator *= rhs._denominator;
+    reduce();
     return *this;
 }
 
@@ -180,7 +181,7 @@ template<typename T>
 Rational<T> Rational<T>::operator++(int) {//postfix ++
     auto copy{ *this };
     ++(*this);
-    return copy;
+    return copy; 
 }
 
 template<typename T>
