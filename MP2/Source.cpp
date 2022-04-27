@@ -1,10 +1,9 @@
-#pragma once 
 
 
 
 #include "Header.h"
 #include <numeric>
-#include <algorithm>
+
 
 
 Rational::Rational(int num, int den) : _numerator(num), _denominator(den) {
@@ -42,7 +41,7 @@ Rational operator+(const Rational& lhs, const Rational& rhs) {
     return temp;
 }
 
-#if 0
+//#if 0
 
 Rational operator-(const Rational& lhs) {
     return { -lhs._numerator, lhs._denominator };
@@ -120,4 +119,4 @@ bool operator<=(const Rational& lhs, const Rational& rhs) {//canonical
 bool operator>=(const Rational& lhs, const Rational& rhs) {//canonical
     return !(rhs < lhs);
 }
-#endif
+//#endif

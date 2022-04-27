@@ -8,8 +8,8 @@
 * homework handout
 */
 
-
-#include "myreadwrite.h"
+/*
+#include "myreadwrite.hpp"
 
 
 using std::string;
@@ -37,3 +37,5 @@ int main() {
 
 	return 0; 
 }
+
+*/

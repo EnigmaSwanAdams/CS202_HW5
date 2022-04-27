@@ -1,3 +1,7 @@
+
+
+
+
 #ifndef RATIONAL_HPP
 #define RATIONAL_HPP
 #include <iostream>
@@ -20,7 +24,7 @@ public:
 	friend Rational operator+(const Rational&, const Rational&);
 
 
-#if 0
+//#if 0
 	friend Rational operator-(const Rational& lhs);
 	friend bool operator==(const Rational& lhs, const Rational& rhs);
 	friend bool operator<(const Rational& lhs, const Rational& rhs);
@@ -35,10 +39,10 @@ public:
 	Rational operator--(int); //postfix --
 private:
 
-#endif
+//#endif
 };
 
-#if 0
+//#if 0
 Rational operator-(const Rational& lhs, const Rational& rhs);
 Rational operator*(Rational lhs, const Rational& rhs);
 Rational operator/(Rational lhs, const Rational& rhs);
@@ -46,6 +50,6 @@ bool operator!=(const Rational& lhs, const Rational& rhs);
 bool operator>(const Rational& lhs, const Rational& rhs);
 bool operator<=(const Rational& lhs, const Rational& rhs);
 bool operator>=(const Rational& lhs, const Rational& rhs);
-#endif
+//#endif
 
 #endif
