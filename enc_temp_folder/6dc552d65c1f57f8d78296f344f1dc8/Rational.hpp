@@ -131,14 +131,13 @@ Rational<T> operator+(const Rational<T>& lhs, const Rational<T>& rhs) {
 
 template<typename T>
 Rational<T> operator-(const Rational<T>& lhs) {
-    
-    return { -lhs._numerator, lhs._denominator };
+    return { -lhs._numerator, lhs._denominator }; 
 }
 
 template<typename T>
 Rational<T>& Rational<T>::operator-=(const Rational<T>& rhs) { //Canonical
     *this = *this - rhs; //uses Rational::operator- to define operator-=
-    reduce();
+    //reduce();
     return *this;
 }
 
