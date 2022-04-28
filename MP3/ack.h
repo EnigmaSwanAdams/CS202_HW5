@@ -13,6 +13,6 @@
 
 // returns Ackerman's number for inputs m and n 
 // as defined in the homework handout 
-int ack(int m, int n);
+unsigned int ack(unsigned int m,unsigned int n);
 
 #endif /*ACK_H_*/

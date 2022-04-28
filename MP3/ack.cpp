@@ -7,7 +7,9 @@
 * Main Program 3: file containing ack function definition
 */
 
-int ack(int m, int n) {
+unsigned int ack(unsigned int m, unsigned int n) {
+	
+
 	if (m == 0) {
 		return n + 1;
 	}
